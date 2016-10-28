@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home assignment #13-14 for javascript</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/dist/tmpl.js"></script>
+    <script src="js/dist/script.js"></script>
+</head>
+<body>
+    <script type="text/template" id="output-test">
+        <div class="output-wrapper">
+            <h1 class="test-header">Тест по географии</h1>
+            <p class="text-under-header">в каждой группе только один ответ - правильный</p>
+            <form action="">
+                <% for (var i =  0; i < data.length; i++) { %>      
+                    <p class="content-output"><%= data[i].questionTitle %></p>                      
+                    <% for (var j =  0; j < data[i].questionText.length; j++) { %>
+                        <div class="checkbox-postion">
+                            <input type="checkbox" class="<%= 'question-answer_' + i %>" id="<%= 'checkbox_' + i + '_' + j %>">
+                            <label class="label-for-question" for="<%= 'checkbox_' + i + '_' + j %>">
+                            <%= (i + 1) + '.'+ (j + 1) + '  ' + data[i].questionText[j] %>
+                            </label>
+                        </div>
+                    <% }; %>                
+                <% }; %>
+                <div class="button-refer-position">
+                    <input class="button-refer" type="button" value="Проверить">
+                </div>
+            </form>
+        </div>      
+    </script>           
+    <div class="modal-window">
+        <div class="modal-window__wrapper">
+            <p class='modal-window__title'>Результаты теста:</p>
+            <div class="modal-window__result-here"></div>
+        </div>              
+    </div>
+</body>
+</html>

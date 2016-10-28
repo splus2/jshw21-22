@@ -1,0 +1,187 @@
+.output-wrapper {
+    display: none;
+    margin: 30px auto;
+    padding: 30px 0;
+    width: 40%;
+    border: 1px solid black;
+    box-shadow: 0 0 10px black;
+}
+
+.test-header {
+    text-align: center;
+    font-family: Arial, Tahoma;
+    font-size: 20px;
+}
+
+.text-under-header {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: Arial, Tahoma;
+}
+
+.content-output {
+	margin-left: 25px;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.button-refer-position {
+    margin: 35px 0 20px 0;
+    text-align: center;
+}
+
+.button-refer {
+    width: 200px;
+    height: 50px;
+    background: #cfe2f3;
+    border: 1px solid grey;
+    color: #000000;
+    font-size: 20px;
+    border: 2px solid #000000;
+    cursor: pointer;
+}
+
+.button-refer:hover {
+    font-weight: bold;
+    box-shadow: 0px 0px 20px 2px #000000;
+    border: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+label:before {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: #cfe2f3;
+    border: 2px solid #000000;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    font-size: 15px;
+    content: #000000;
+    text-align: center;
+    line-height: 13px;
+}
+
+.checkbox-postion {
+    margin-left: 25px;
+}
+
+.modal-window {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: lightgrey;
+    text-align: center;
+    box-shadow: 0px 0px 10px 2px #000000;    
+    z-index: 10;
+}
+
+.modal-window:after {
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+    content: '';
+}
+
+.modal-window__wrapper {
+    display: inline-block;
+    position: relative;
+    max-width: 80%;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px 2px #000000;
+    background: #fff;
+    vertical-align: middle;
+    z-index: 20;
+}
+
+.modal-window__title {
+    text-align: center;
+    font-family: Arial, Tahoma;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.modal-window__output-result {
+    margin-left: 10px;
+    font-family: Arial, Tahoma;
+    font-size: 14px;
+}
+
+.modal-window__output-result-all-correct {
+    margin-top: 25px;
+    text-align: center;
+ /*   width: 375px;*/
+    font-family: Arial, Tahoma;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.modal-window__output-result-not-all-correct {
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial, Tahoma;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    color: blue;
+}
+
+.modal-window__output-result-not-choosed {
+    text-align: center;
+    font-family: Arial, Tahoma;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    color: red;
+}
+
+.modal-window__button-retry {
+    width: 200px;
+    height: 50px;
+    background: #cfe2f3;
+    border: 1px solid grey;
+    color: #000000;
+    font-size: 16px;
+    border: 2px solid #000000;
+    cursor: pointer;
+}
+
+.modal-window__button-retry:hover {
+    font-weight: bold;
+    box-shadow: 0px 0px 20px 2px #000000;
+    border: none;
+}
+
+.modal-window__result-here {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
